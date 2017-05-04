@@ -1,6 +1,9 @@
 Binary Search Trees
 ===================
 
+:author: Joel Burton <joel@joelburton.com>
+
+
 Definitions
 -----------
 
@@ -10,7 +13,10 @@ Tree
     Each node can have 0 or more children. Nodes without
     children are called "leaf nodes". There may or may
     not be a special reason for the arrangement of the
-    nodes.
+    nodes. Trees that aren't limited to a certain number
+    of children-per-node are sometimes called "general
+    trees" or "n-ary trees" (instead of "*bi*-nary, they're
+    *some-value-of-n*-ary).
 
 Binary Tree
     A tree where each node has 0, 1, or 2 children.
@@ -38,11 +44,11 @@ is ``O(log n)``"! Always ask "the runtime of
 - Another example: printing all of the nodes in the tree is
   ``O(n)`` --- you have to look at each node to print it!  
 
-For searching a BST, the you can talk about this in two possible
-ways: in terms of the height of the tree, or in terms of the
-number of nodes.
+**Searching**: For searching a BST, the you can talk about this 
+in two possible ways: in terms of the height of the tree, or 
+in terms of the number of nodes.
 
-Consider this tree::
+Consider this BST::
 
             5
         3       7 
@@ -147,9 +153,11 @@ Both of these are easy ``O(1)`` operations in a dictionary.
 
 However, there are things dictionaries aren't good for:
 
-- finding employee with smallest( or largest SSN
+- finding employee with smallest (or largest) SSN
+
 - finding employees with SSNs less-than or greater-than a value
   ("find everyone with an SSN less than 222" or "starting with 4")
+
 - finding employees by SSN ranges ("find everyone whose SSN is
   between 300-* and 800-*")
 
