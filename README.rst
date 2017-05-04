@@ -164,7 +164,7 @@ However, there are things dictionaries aren't good for:
   ("find everyone with an SSN less than 222" or "starting with 4")
 
 - finding employees by SSN ranges ("find everyone whose SSN is
-  between 300-* and 800-*")
+  between 300-\* and 800-\*")
 
 With a dictionary, all of these would be ``O(n)`` operations, since
 we'd have to look at every single item.
