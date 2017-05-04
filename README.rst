@@ -244,39 +244,51 @@ Code Challenges
 Easier
 ++++++
 
+These problems are linear --- they don't require a recursive version.
+
 bst.py
   Make a class for a binary tree.
 
 contains.py
   Does a BST contain a node with given value?
 
-count.py
-  How many nodes are in a binary tree?
-
 max.py
   What is the largest value in a BST?
-
-height.py
-  What is the height of a binary tree?
 
 rank.py
   For a BST, what is the rank (depth) of the node with the given value?
 
-Harder
+Medium
 ++++++
 
-create.py
-  Create a balanced binary tree, given a list of input
+These problems are a bit harder --- they require walking the tree,
+either recursively or using a stack to keep track of the traversal:
+
+count.py
+  How many nodes are in a binary tree?
+
+height.py
+  What is the height of a binary tree?
 
 full.py
   Is a given tree "full" (every node has either zero or two children)
 
+traverse.py
+  Traverse a BST, printing every node in ascending order
+
+Harder
+++++++
+
+These problems are a bit harder still --- they require a recursive
+or stack-maintaining version, plus they require some thought about
+how to solve the problem at hand, separate from the traversal.
+
+create.py
+  Create a balanced binary tree, given a list of input
+
 perfect.py
   Is a given tree "perfect" (perfect triangle; full and also every
   leaf is at same level)
-
-traverse.py
-  Traverse a BST, printing every node in ascending order
 
 valid.py
   Is a BST valid (does it follow the left-less, right-greater rule?)
