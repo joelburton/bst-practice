@@ -261,7 +261,7 @@ max.py
   What is the largest value in a BST?
 
 rank.py
-  For a BST, what is the rank (depth) of the node with the given value?
+  For a BST, what is the rank (level) of the node with the given value?
 
 Medium
 ++++++
@@ -305,10 +305,13 @@ balanced.py
 Misc Stuff
 ----------
 
+An excellent followup to this is the chapter on Trees at
+http://interactivepython.org/runestone/static/pythonds/Trees/toctree.html
+
 - BSTs aren't the only kind of binary trees. They are the most common,
   but there are other kinds. In particular, there's another kind of
-  binary tree, a "min heap", which is very efficient (``O(1)``) for
-  finding the smallest item in a collection, and can add/delete items
+  binary tree, a "binary heap", which is very efficient (``O(1)``) for
+  finding the smallest/largest item in a collection, and can add/delete items
   in ``O(log n)`` time. These have a special arrangement of the
   nodes in the tree, like a BST, but it's not the "less-on-left,
   greater-on-right" that a BST uses.
