@@ -34,26 +34,26 @@ Runtimes of BSTs
 ----------------
 
 Be careful about just saying the "runtime of a binary search tree
-is ``O(log n)``"! Always ask "the runtime of 
-*what action*?"" 
+is ``O(log n)``"! Always ask "the runtime of
+*what action*?""
 
-- For example, finding the immediate children of the 
+- For example, finding the immediate children of the
   root is ``O(1)`` --- since we're only looking 1 level down, it
   doesn't matter how deep the tree is
 
 - Another example: printing all of the nodes in the tree is
-  ``O(n)`` --- you have to look at each node to print it!  
+  ``O(n)`` --- you have to look at each node to print it!
 
-**Searching**: For searching a BST, the you can talk about this 
-in two possible ways: in terms of the height of the tree, or 
+**Searching**: For searching a BST, the you can talk about this
+in two possible ways: in terms of the height of the tree, or
 in terms of the number of nodes.
 
 Consider this BST::
 
             5
-        3       7 
+        3       7
       1   4   6   9
-     0 
+     0
 
 The runtime to search this BST for a value is ``O(h)``, where `h`
 is the height of the tree. This is true for *all* binary trees:
@@ -109,8 +109,8 @@ It's not the kind of thing most developers have memorized (I don't!).
 However, you can learn a few things about them:
 
 - both of these self-balancing BSTs require that you keep
-  track of some special information about each node (the 
-  "balance factor" for AVL, the "red/black" for red/black). 
+  track of some special information about each node (the
+  "balance factor" for AVL, the "red/black" for red/black).
 
 - both can add and delete new elements in ``O(log n)`` runtime,
   assuming tree is already balanced.
@@ -165,14 +165,14 @@ With a dictionary, all of these would be ``O(n)`` operations, since
 we'd have to look at every single item.
 
 For a BST, simple lookup to match an SSN is ``O(log n)`` --- worse than
-a dictionary. However, we could find things like the smallest or 
+a dictionary. However, we could find things like the smallest or
 largest SSN is ``O(log n)`` --- a big improvement over ``O(n)``!
 
 
 Duplicate Nodes
 ---------------
 
-Most BSTs are defined to have no duplicate nodes. 
+Most BSTs are defined to have no duplicate nodes.
 
 If you do allow duplicate nodes in a BST, you need to decide
 whether equal nodes go the left or right (it needs to be one, since
@@ -204,7 +204,7 @@ with recursion.
 **Fact:** any algorithm that you can solve with recursion can be
 solved iteratively.
 
-**Strongly Held Opinion:** some problems just seem more sensible 
+**Strongly Held Opinion:** some problems just seem more sensible
 with one style or another.
 
 When you have an algorithm that needs to make a single choice at
@@ -236,6 +236,53 @@ recursively::
 This kind of recursion is often called "multiple recursion" ---
 inside the recursive function, you're firing off more than one
 call to the function in question.
+
+
+Code Challenges
+---------------
+
+Easier
+++++++
+
+bst.py
+  Make a class for a binary tree.
+
+contains.py
+  Does a BST contain a node with given value?
+
+count.py
+  How many nodes are in a binary tree?
+
+max.py
+  What is the largest value in a BST?
+
+height.py
+  What is the height of a binary tree?
+
+rank.py
+  For a BST, what is the rank (depth) of the node with the given value?
+
+Harder
+++++++
+
+create.py
+  Create a balanced binary tree, given a list of input
+
+full.py
+  Is a given tree "full" (every node has either zero or two children)
+
+perfect.py
+  Is a given tree "perfect" (perfect triangle; full and also every
+  leaf is at same level)
+
+traverse.py
+  Traverse a BST, printing every node in ascending order
+
+valid.py
+  Is a BST valid (does it follow the left-less, right-greater rule?)
+
+balanced.py
+  Is a BST balanced?
 
 
 Misc Stuff
