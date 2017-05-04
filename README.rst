@@ -241,7 +241,7 @@ call to the function in question.
 Misc Stuff
 ----------
 
-- BSTs are the only kind of binary trees. They are the most common,
+- BSTs aren't the only kind of binary trees. They are the most common,
   but there are other kinds. In particular, there's another kind of
   binary tree, a "min heap", which is very efficient (``O(1)``) for
   finding the smallest item in a collection, and can add/delete items
