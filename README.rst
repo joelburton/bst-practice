@@ -82,10 +82,10 @@ It's not ``O(log n)``, though, since this tree isn't balanced --- it's
 A perfectly-balanced BST will have a height that can be found with::
 
     import math
-    math.ceil(math.log(n - 1, 2))
+    math.ceil(math.log(n + 1, 2))
 
 (that is, the smallest integer that is equal to or greater than
-the logarithm-2 of the number of nodes minus 1).
+the logarithm-2 of the number of nodes plus 1).
 
 So, for example, to store 6 nodes, you could do this in a tree
 that is 3 high. (You could store up to 7 nodes in a 3-height BST;
