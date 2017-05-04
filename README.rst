@@ -91,6 +91,11 @@ So, for example, to store 6 nodes, you could do this in a tree
 that is 3 high. (You could store up to 7 nodes in a 3-height BST;
 to store more, you'd need another rank).
 
+(However, just because a BST uses the fewest number of ranks
+doesn't always mean its balanced --- to be balanced, there's a stricter
+requirement: for every node, the height of its left-subtree can
+vary from the height of its right-subtree by, at most, 1).
+
 
 Self-Balancing BSTs
 -------------------
